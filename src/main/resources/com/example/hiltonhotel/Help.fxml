@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="841.0" prefWidth="1300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hiltonhotel.Helpcontroller">
+   <children>
+      <AnchorPane prefHeight="180.0" prefWidth="1302.0" style="-fx-background-color: #008B8B;">
+         <children>
+
+            <Label layoutX="605.0" layoutY="43.0" prefHeight="73.0" prefWidth="240.0" text="Help" textFill="#fff9f9">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Line endX="65.0" endY="-1.0" layoutX="660.0" layoutY="117.0" startX="-64.0" startY="-1.0" stroke="#fffdfd" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@guesti.jpg" />
+               </image>
+            </ImageView>
+
+         </children>
+      </AnchorPane>
+      <Label layoutX="280.0" layoutY="207.0" prefHeight="43.0" prefWidth="182.0" text="Address" textFill="#108f94">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="260.0" prefHeight="45.0" prefWidth="496.0" text="4651 Sugar Camp Road,Minnessota 55060" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="394.0" prefHeight="45.0" prefWidth="200.0" text="Phone" textFill="#118397">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="445.0" prefHeight="45.0" prefWidth="289.0" text="8988-91-7500">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="576.0" prefHeight="21.0" prefWidth="289.0" text="Email" textFill="#11848a">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="629.0" prefHeight="45.0" prefWidth="300.0" text="hilton@gmail.com">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+
+      <AnchorPane layoutX="715.0" layoutY="312.0" prefHeight="382.0" prefWidth="525.0" style="-fx-background-color: #008B8B;">
+         <children>
+            <Label layoutX="168.0" layoutY="7.0" prefHeight="42.0" prefWidth="240.0" text="Send Message" textFill="#f8fcfc">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="58.0" prefHeight="17.0" prefWidth="214.0" text="Full Name" textFill="#f8f5f5">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="128.0" prefHeight="17.0" prefWidth="240.0" text="Email" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="204.0" prefHeight="17.0" prefWidth="262.0" text="Type your Message.." textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameee" layoutX="48.0" layoutY="91.0" prefHeight="35.0" prefWidth="411.0" />
+            <TextField fx:id="tf_email" layoutX="48.0" layoutY="163.0" prefHeight="35.0" prefWidth="411.0" />
+            <Button layoutX="217.0" layoutY="317.0" mnemonicParsing="false" onAction="#send" prefHeight="51.0" prefWidth="107.0" style="-fx-background-color: #ffffff;" text="Send" textFill="#099bae">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="tf_msgg" layoutX="48.0" layoutY="248.0" prefHeight="62.0" prefWidth="411.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="104.0" fitWidth="171.0" layoutX="86.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@download.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="171.0" layoutX="86.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@call.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="171.0" layoutX="94.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="-10.0" layoutY="180.0" mnemonicParsing="false" onAction="#gobck" prefHeight="56.0" prefWidth="96.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="⬅">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Label fx:id="label" layoutX="753.0" layoutY="734.0" prefHeight="56.0" prefWidth="512.0" textFill="#0314d3">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>

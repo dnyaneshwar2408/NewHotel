@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1300.0" style="-fx-background-color: #ffffffff;" stylesheets="@image.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hiltonhotel.logincontroller">
+   <children>
+      <AnchorPane prefHeight="176.0" prefWidth="1300.0" style="-fx-background-color: darkcyan;">
+         <children>
+            <Label layoutX="440.0" layoutY="58.0" prefHeight="76.0" prefWidth="397.0" text="      ADMIN LOGIN" textFill="#f5eded">
+               <font>
+                  <Font size="44.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Line endX="164.0" endY="17.0" layoutX="650.0" layoutY="111.0" startX="-162.0" startY="17.0" stroke="#fcf8f8" />
+            <ImageView fitHeight="173.0" fitWidth="240.0" layoutX="8.0" layoutY="9.0">
+               <image>
+                  <Image url="@guesti.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="189.0" fitWidth="214.0" layoutX="1086.0" layoutY="2.0">
+               <image>
+                  <Image url="@l2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="336.0" layoutY="432.0" mnemonicParsing="false" onAction="#login" prefHeight="53.0" prefWidth="143.0" style="-fx-background-color: darkcyan;" text="LOGIN" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Label layoutX="67.0" layoutY="232.0" prefHeight="45.0" prefWidth="172.0" text="USERNAME" textFill="#0d5965">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="332.0" prefHeight="45.0" prefWidth="172.0" text="PASSWORD" textFill="#09555b">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tf_password" layoutX="256.0" layoutY="332.0" prefHeight="46.0" prefWidth="188.0" promptText="enter password">
+         <font>
+            <Font size="18.0" />
+         </font></PasswordField>
+      <TextField fx:id="tf_username" layoutX="256.0" layoutY="231.0" prefHeight="46.0" prefWidth="222.0" promptText="enter username">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button layoutX="227.0" layoutY="552.0" mnemonicParsing="false" onAction="#signup" prefHeight="53.0" prefWidth="130.0" style="-fx-background-color: #ffffffff;" text="SIGN UP" textFill="#e80505">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Label layoutX="37.0" layoutY="559.0" prefHeight="39.0" prefWidth="202.0" style="-fx-background-color: white;" text="New member.....?">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <Button layoutX="104.0" layoutY="432.0" mnemonicParsing="false" onAction="#cancel" prefHeight="53.0" prefWidth="143.0" style="-fx-background-color: darkcyan;" text="CANCEL" textFill="#f5efef">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <ImageView fitHeight="273.0" fitWidth="313.0" layoutX="654.0" layoutY="248.0">
+         <image>
+            <Image url="@l5.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="251.0" fitWidth="313.0" layoutX="977.0" layoutY="409.0">
+         <image>
+            <Image url="@l3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="189.0" fitWidth="313.0" layoutX="980.0" layoutY="669.0">
+         <image>
+            <Image url="@l4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="265.0" fitWidth="288.0" layoutX="679.0" layoutY="536.0">
+         <image>
+            <Image url="@l6.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="189.0" fitWidth="313.0" layoutX="977.0" layoutY="206.0">
+         <image>
+            <Image url="@l1.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="label" layoutX="37.0" layoutY="697.0" prefHeight="39.0" prefWidth="429.0" style="-fx-background-color: white;">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

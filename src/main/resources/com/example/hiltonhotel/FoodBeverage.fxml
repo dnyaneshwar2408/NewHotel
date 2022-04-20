@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="864.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hiltonhotel.Foodcontroller">
+   <children>
+      <AnchorPane prefHeight="181.0" prefWidth="1300.0" style="-fx-background-color: darkcyan;">
+         <children>
+
+            <Label layoutX="468.0" layoutY="47.0" prefHeight="87.0" prefWidth="406.0" text="Food &amp; Beverage" textFill="#f5f3f3">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect></Label>
+            <Line endX="246.0" layoutX="605.0" layoutY="123.0" startX="-157.0" stroke="#f8f4f4" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="73.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@guesti.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1032.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@f5.jpg" />
+               </image>
+            </ImageView>
+
+
+         </children>
+      </AnchorPane>
+      <Label layoutX="459.0" layoutY="210.0" prefHeight="54.0" prefWidth="317.0" text="Restaurant Dining" textFill="#226f86">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="265.0" prefHeight="40.0" prefWidth="126.0" text="Guest Id">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="373.0" text="Room No">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="432.0" prefHeight="39.0" prefWidth="115.0" text="Charges">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="465.0" prefHeight="60.0" prefWidth="287.0" text="Banquet Dining" textFill="#0e626b">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_gid" layoutX="263.0" layoutY="265.0" prefHeight="39.0" prefWidth="182.0" style="border: silver;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextField>
+      <TextField fx:id="tf_room" layoutX="263.0" layoutY="374.0" prefHeight="39.0" prefWidth="182.0" />
+      <TextField fx:id="tf_charge" layoutX="263.0" layoutY="432.0" prefHeight="39.0" prefWidth="182.0" />
+      <Label layoutX="59.0" layoutY="549.0" prefHeight="39.0" prefWidth="115.0" text="Guest Id">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="655.0" text="Total Guests">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="715.0" prefHeight="39.0" prefWidth="108.0" text="Charges">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_gidd" layoutX="263.0" layoutY="542.0" prefHeight="39.0" prefWidth="182.0" />
+      <TextField fx:id="tf_total" layoutX="263.0" layoutY="656.0" prefHeight="39.0" prefWidth="182.0" />
+      <TextField fx:id="tf_chargess" layoutX="263.0" layoutY="715.0" prefHeight="40.0" prefWidth="182.0" />
+      <Button fx:id="save" layoutX="482.0" layoutY="763.0" mnemonicParsing="false" onAction="#save" prefHeight="48.0" prefWidth="108.0" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="695.0" layoutY="763.0" mnemonicParsing="false" onAction="#goback" prefHeight="65.0" prefWidth="296.0" text="Go to Dashboard">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1028.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@f2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1109.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@f3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1002.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1157.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@f4.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="59.0" layoutY="318.0" prefHeight="40.0" prefWidth="172.0" text="Guest NAME">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_gname" layoutX="263.0" layoutY="319.0" prefHeight="39.0" prefWidth="182.0" style="border: silver;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label layoutX="59.0" layoutY="600.0" prefHeight="40.0" prefWidth="172.0" text="Guest NAME">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_gnamee" layoutX="263.0" layoutY="600.0" prefHeight="39.0" prefWidth="182.0" style="border: silver;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Label fx:id="msg" layoutX="301.0" layoutY="818.0" prefHeight="40.0" prefWidth="783.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="Moving" layoutX="20.0" layoutY="193.0" prefHeight="24.0" prefWidth="572.0" text="YOU CAN SELECT ANY DINING .OFFERS AVAILABLE!!!" textFill="#0b93e1">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

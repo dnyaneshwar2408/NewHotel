@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="864.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hiltonhotel.Roomcontroller">
+   <children>
+      <AnchorPane prefHeight="166.0" prefWidth="1336.0" style="-fx-background-color: darkcyan;">
+         <children>
+            <Label layoutX="483.0" layoutY="42.0" prefHeight="66.0" prefWidth="368.0" text="Rooms &amp; Divisions" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+
+            <Line endX="186.0" layoutX="640.0" layoutY="108.0" startX="-167.0" stroke="#f8f1f1" />
+            <ImageView fitHeight="161.0" fitWidth="245.0" layoutX="6.0" layoutY="6.0">
+               <image>
+                  <Image url="@guesti.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="175.0" fitWidth="308.0" layoutX="1028.0" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="714.0" prefHeight="144.0" prefWidth="660.0" style="-fx-background-color: darkcyan;">
+         <children>
+            <Label layoutX="48.0" layoutY="45.0" prefHeight="66.0" prefWidth="275.0" style="-fx-background-color: white;" text="  Rooms Available" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="389.0" layoutY="45.0" prefHeight="66.0" prefWidth="217.0" style="-fx-background-color: white;" text="   Rooms Full" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="175.0" layoutY="95.0" prefHeight="35.0" prefWidth="41.0" style="-fx-background-color: silver;" text=" 60">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="477.0" layoutY="95.0" prefHeight="35.0" prefWidth="41.0" style="-fx-background-color: silver;" text=" 40">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="61.0" layoutY="186.0" prefHeight="35.0" prefWidth="130.0" text="Guest Id">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="243.0" prefHeight="35.0" prefWidth="160.0" text="Guest Name">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="304.0" prefHeight="35.0" prefWidth="136.0" text="Room Type">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="389.0" prefHeight="35.0" prefWidth="118.0" text="Room No">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="454.0" prefHeight="35.0" prefWidth="160.0" text="Booked From">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="518.0" prefHeight="35.0" prefWidth="160.0" text="Booked Till">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TextField fx:id="tf_gid" layoutX="269.0" layoutY="186.0" prefHeight="35.0" prefWidth="245.0" />
+      <TextField fx:id="tf_Fname" layoutX="270.0" layoutY="243.0" prefHeight="35.0" prefWidth="245.0" />
+      <TextField fx:id="tf_room" layoutX="269.0" layoutY="389.0" prefHeight="35.0" prefWidth="245.0" />
+      <Button layoutX="117.0" layoutY="579.0" mnemonicParsing="false" onAction="#save" prefHeight="55.0" prefWidth="107.0" text="Save">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="369.0" layoutY="579.0" mnemonicParsing="false" onAction="#goback" prefHeight="55.0" prefWidth="233.0" text="Go to Dashboard">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="224.0" fitWidth="368.0" layoutX="960.0" layoutY="182.0">
+         <image>
+            <Image url="@r3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="224.0" fitWidth="375.0" layoutX="819.0" layoutY="410.0">
+         <image>
+            <Image url="@r1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="218.0" fitWidth="368.0" layoutX="961.0" layoutY="640.0">
+         <image>
+            <Image url="@r2.jpg" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="checkbox" layoutX="269.0" layoutY="304.0" prefHeight="35.0" prefWidth="245.0" />
+      <DatePicker fx:id="tf_bfrom" layoutX="270.0" layoutY="454.0" prefHeight="35.0" prefWidth="253.0" />
+      <DatePicker fx:id="tf_btill" layoutX="270.0" layoutY="511.0" prefHeight="35.0" prefWidth="253.0" />
+      <Label fx:id="label" layoutX="124.0" layoutY="665.0" prefHeight="42.0" prefWidth="509.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
