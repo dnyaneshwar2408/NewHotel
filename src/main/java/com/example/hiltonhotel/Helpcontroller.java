@@ -49,6 +49,9 @@ public  class Helpcontroller extends NullPointerException
         psinsert.setString(3, msg);
         psinsert.executeUpdate();
         label.setText("Feedback Saved Successfully .THANK YOU!!");
+        nameee.clear();
+        tf_email.clear();
+        tf_msgg.clear();
     } catch (SQLException epe)
     {
     epe.printStackTrace();

@@ -24,6 +24,7 @@ public  class logincontroller extends NullPointerException {
     public void login(ActionEvent e) {
 
         if (!tf_username.getText().isBlank() && !tf_password.getText().isBlank() ){
+
             validatelogin(e);
 
         } else {

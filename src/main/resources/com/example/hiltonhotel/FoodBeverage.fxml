@@ -84,12 +84,12 @@
       <TextField fx:id="tf_gidd" layoutX="263.0" layoutY="542.0" prefHeight="39.0" prefWidth="182.0" />
       <TextField fx:id="tf_total" layoutX="263.0" layoutY="656.0" prefHeight="39.0" prefWidth="182.0" />
       <TextField fx:id="tf_chargess" layoutX="263.0" layoutY="715.0" prefHeight="40.0" prefWidth="182.0" />
-      <Button fx:id="save" layoutX="482.0" layoutY="763.0" mnemonicParsing="false" onAction="#save" prefHeight="48.0" prefWidth="108.0" text="Save">
+      <Button fx:id="save" layoutX="700.0" layoutY="753.0" mnemonicParsing="false" onAction="#save" prefHeight="65.0" prefWidth="115.0" text="SAVE">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Button>
-      <Button layoutX="695.0" layoutY="763.0" mnemonicParsing="false" onAction="#goback" prefHeight="65.0" prefWidth="296.0" text="Go to Dashboard">
+      <Button layoutX="851.0" layoutY="755.0" mnemonicParsing="false" onAction="#goback" prefHeight="65.0" prefWidth="330.0" text="GO TO DASHBOARD">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
@@ -138,10 +138,17 @@
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Label>
-      <Label fx:id="Moving" layoutX="20.0" layoutY="193.0" prefHeight="24.0" prefWidth="572.0" text="YOU CAN SELECT ANY DINING .OFFERS AVAILABLE!!!" textFill="#0b93e1">
+      <Label fx:id="Moving" layoutX="20.0" layoutY="193.0" prefHeight="24.0" prefWidth="572.0" text="YOU CAN SELECT ANY ONE DINING!!!" textFill="#0b93e1">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="save1" layoutX="512.0" layoutY="753.0" mnemonicParsing="false" onAction="#update" prefHeight="65.0" prefWidth="161.0" text="UPDATE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="459.0" layoutY="272.0" mnemonicParsing="false" text="🔍" />
+      <Button layoutX="459.0" layoutY="549.0" mnemonicParsing="false" onAction="#search" text="🔍" />
    </children>
 </AnchorPane>

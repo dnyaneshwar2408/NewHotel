@@ -26,7 +26,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.paint.Paint;
 
-public  class Dashboardcontroller extends NullPointerException
+public  class Dashboardcontroller extends NullPointerException implements Initializable
 {
     @FXML
     private Label label;
@@ -157,19 +157,39 @@ public  class Dashboardcontroller extends NullPointerException
         } catch(Exception ep) {
             ep.printStackTrace();
         }
+
+    }
+    @FXML
+    protected void view(ActionEvent e) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Display.fxml"));
+            ((Node) (e.getSource())).getScene().getWindow().hide();
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception ep) {
+            ep.printStackTrace();
+        }
     }
     @FXML
     protected void newbook(ActionEvent e)
 
     {
 
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             DatabaseConnection connectnow = new DatabaseConnection();
             Connection connectdb = connectnow.getconnection();
             PreparedStatement pnew = null;
-            pnew = connectdb.prepareStatement("select count(*) as avai from guest_info1 ");
+            pnew = connectdb.prepareStatement("select count(*) as avai from finance ");
 
-           ResultSet rs = pnew.executeQuery();
+            ResultSet rs = pnew.executeQuery();
             while (rs.next()) {
                 int c = rs.getInt("avai");
                 label.setText(String.valueOf(c));

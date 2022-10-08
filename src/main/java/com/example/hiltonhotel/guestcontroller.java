@@ -27,6 +27,8 @@ public  class guestcontroller extends  NullPointerException implements Initializ
     @FXML
     private TextField tf_gid;
     @FXML
+    private TextField tf_gidd;
+    @FXML
     private TextField tf_Fname;
     @FXML
     private TextField tf_Lname;
@@ -61,7 +63,7 @@ public  class guestcontroller extends  NullPointerException implements Initializ
     protected void gsave(ActionEvent e)
 
     {
-        String Guest_id=tf_gid.getText();
+        String Guest_id=tf_gidd.getText();
         String Firstname=tf_Fname.getText();
         String Lastname=tf_Lname.getText();
         String Email=tf_Email.getText();
@@ -74,7 +76,7 @@ public  class guestcontroller extends  NullPointerException implements Initializ
         LocalDate Checkin=tf_checkin.getValue();
         LocalDate Checkout=tf_checkout.getValue();
 
-        if(!tf_gid.getText().isBlank() &&!tf_Fname.getText().isBlank() && !tf_Email.getText().isBlank() && !tf_Age.getText().isBlank()&&!tf_Phone.getText().isBlank() &&!tf_Add.getText().isBlank()) {
+        if(!tf_gidd.getText().isBlank() &&!tf_Fname.getText().isBlank() && !tf_Email.getText().isBlank() && !tf_Age.getText().isBlank()&&!tf_Phone.getText().isBlank() &&!tf_Add.getText().isBlank()) {
             DatabaseConnection connectnow = new DatabaseConnection();
             Connection connectdb = connectnow.getconnection();
             PreparedStatement psinsert = null;
@@ -127,7 +129,23 @@ public  class guestcontroller extends  NullPointerException implements Initializ
                     psinsert.setString(6, Checkin.toString());
                     psinsert.setString(7, Checkout.toString());
                     psinsert.executeUpdate();
-                    msg1.setText("Saved Successfully..");
+
+                    tf_gidd.clear();
+                    tf_gid.clear();
+                    tf_Fname.clear();
+                    tf_Lname.clear();
+                    tf_Email.clear();
+                    tf_Add.clear();
+                    tf_Phone.clear();
+                    tf_Age.clear();
+                    tf_adult.clear();
+                    tf_child.clear();
+                    tf_norooms.clear();
+                    checkbox.getItems().clear();
+
+
+                    tf_checkin.getEditor().clear();
+                    tf_checkout.getEditor().clear();
                 }
             } catch (SQLException ep) {
                 ep.printStackTrace();
@@ -138,6 +156,7 @@ public  class guestcontroller extends  NullPointerException implements Initializ
         else {
                        msg.setText("All Fields Are Compulsory");
              }
+
 
 
 
@@ -155,4 +174,173 @@ public  class guestcontroller extends  NullPointerException implements Initializ
             stage.show();
         } catch(Exception ep) {
             ep.printStackTrace();
-        }}}
+        }
+    }
+    @FXML
+    protected void search(ActionEvent e)
+
+    {
+        DatabaseConnection connectnow = new DatabaseConnection();
+        Connection connectdb = connectnow.getconnection();
+        try {
+
+
+
+
+                     String ps = ("select * from guest_info1 where Guest_id=" + tf_gidd.getText());
+                     Statement s = connectdb.createStatement();
+                     ResultSet rs = s.executeQuery(ps);
+                     while (rs.next()) {
+                         tf_Fname.setText(rs.getString("First_name"));
+                         tf_Lname.setText(rs.getString("Last_name"));
+                         tf_Age.setText(rs.getString("Age"));
+                         tf_Phone.setText(rs.getString("Phoneno"));
+                         tf_Email.setText(rs.getString("Email"));
+                         tf_Add.setText(rs.getString("Address"));
+
+                     }
+        }catch(SQLException ee)
+        {
+
+        }
+        try {
+
+
+
+
+            String ps = ("select * from guest_info2 where Guest_id=" + tf_gidd.getText());
+            Statement s = connectdb.createStatement();
+            ResultSet rs = s.executeQuery(ps);
+            while (rs.next()) {
+                tf_gid.setText(rs.getString("Guest_id"));
+                tf_adult.setText(rs.getString("Adults"));
+                tf_child.setText(rs.getString("Children"));
+                checkbox.setValue(rs.getString("Roomtype"));
+                tf_norooms.setText(rs.getString("Roomsbooked"));
+                tf_checkin.setValue(LocalDate.parse(rs.getString("Checkin")));
+                tf_checkout.setValue(LocalDate.parse(rs.getString("Checkout")));
+
+            }
+        }catch(SQLException ee)
+        {
+
+        }
+    }
+    @FXML
+    protected void update(ActionEvent e)
+    {
+        String Guest_id=tf_gid.getText();
+        String GGuest_id=tf_gidd.getText();
+        String Firstname=tf_Fname.getText();
+        String Lastname=tf_Lname.getText();
+        String Email=tf_Email.getText();
+        String Address=tf_Add.getText();
+        String Age=tf_Age.getText();
+        String Phoneno=tf_Phone.getText();
+        String Adults=tf_adult.getText();
+        String Children=tf_child.getText();
+        String Roombooked=tf_norooms.getText();
+        LocalDate Checkin=tf_checkin.getValue();
+        LocalDate Checkout=tf_checkout.getValue();
+        String Roomty=checkbox.getValue();
+
+        if(GGuest_id.isBlank())
+        {
+            msg.setText("Enter Guest Id ");
+        }
+        else
+        {
+
+
+            DatabaseConnection connectnow = new DatabaseConnection();
+            Connection connectdb = connectnow.getconnection();
+            PreparedStatement pcheck=null;
+            PreparedStatement pupdate=null;
+            ResultSet rs=null;
+            try {
+                pcheck = connectdb.prepareStatement("Select * from guest_info1 where Guest_id=?");
+                pcheck.setString(1,GGuest_id);
+                rs=pcheck.executeQuery();
+                if(rs.isBeforeFirst()) {
+
+                    pupdate = connectdb.prepareStatement("update guest_info1 set First_name='" + Firstname + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+
+
+                    pupdate = connectdb.prepareStatement("update guest_info1 set Last_name='" + Lastname + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+
+                    pupdate = connectdb.prepareStatement("update guest_info1 set Age='" + Age + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info1 set Phoneno='" + Phoneno + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info1 set Address='" + Address + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info1 set Email='" + Email + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info2 set Adults='" + Adults + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info2 set Children='" + Children + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info2 set Roomtype='" + Roomty + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info2 set Roomsbooked='" + Roombooked + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info2 set Checkin='" + tf_checkin.getValue() + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+                    pupdate = connectdb.prepareStatement("update guest_info2 set Checkout='" + tf_checkout.getValue() + " 'where Guest_id= ?");
+                    pupdate.setString(1, GGuest_id);
+                    pupdate.executeUpdate();
+
+                    msg.setText("Updated Successfully..");
+
+
+                    tf_gidd.clear();
+                    tf_gid.clear();
+                    tf_Fname.clear();
+                    tf_Lname.clear();
+                    tf_Email.clear();
+                    tf_Add.clear();
+                    tf_Phone.clear();
+                    tf_Age.clear();
+                    tf_adult.clear();
+                    tf_child.clear();
+                    tf_norooms.clear();
+                    checkbox.getItems().clear();
+
+
+                    tf_checkin.getEditor().clear();
+                    tf_checkout.getEditor().clear();
+
+                }
+
+
+
+                else
+                {
+                    Alert ep = new Alert(Alert.AlertType.ERROR);
+                    ep.setContentText("Guest does not exist...");
+                    ep.show();
+
+                }
+
+
+            }catch(SQLException ed)
+            {
+                ed.printStackTrace();
+            }
+        }
+
+    }
+}

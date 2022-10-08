@@ -37,11 +37,16 @@ public  class signupcontroller extends NullPointerException
         String Email=tf_email.getText();
         String Password=tf_passs.getText();
         String Confirmpassword=tf_cpass.getText();
-        DatabaseConnection connectnow = new DatabaseConnection();
-        Connection connectdb = connectnow.getconnection();
         PreparedStatement psinsert=null;
         PreparedStatement pscheck=null;
         ResultSet resultSet=null;
+
+
+        //Connecting with Database file
+        DatabaseConnection connectnow = new DatabaseConnection();
+        Connection connectdb = connectnow.getconnection();
+
+
        if(!tf_username.getText().isBlank() && !tf_firstname.getText().isBlank() && !tf_lastname.getText().isBlank() && !tf_email.getText().isBlank() && !tf_passs.getText().isBlank() &&!tf_cpass.getText().isBlank() ) {
            try {
                pscheck = connectdb.prepareStatement("select * from signup where username= ?");

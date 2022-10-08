@@ -40,12 +40,12 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="175.0" layoutY="95.0" prefHeight="35.0" prefWidth="41.0" style="-fx-background-color: silver;" text=" 60">
+            <Label fx:id="ravai" layoutX="175.0" layoutY="95.0" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: silver;" text="    " textAlignment="RIGHT" wrapText="true">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="477.0" layoutY="95.0" prefHeight="35.0" prefWidth="41.0" style="-fx-background-color: silver;" text=" 40">
+            <Label fx:id="rfull" layoutX="477.0" layoutY="95.0" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: silver;">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -83,14 +83,14 @@
       <TextField fx:id="tf_gid" layoutX="269.0" layoutY="186.0" prefHeight="35.0" prefWidth="245.0" />
       <TextField fx:id="tf_Fname" layoutX="270.0" layoutY="243.0" prefHeight="35.0" prefWidth="245.0" />
       <TextField fx:id="tf_room" layoutX="269.0" layoutY="389.0" prefHeight="35.0" prefWidth="245.0" />
-      <Button layoutX="117.0" layoutY="579.0" mnemonicParsing="false" onAction="#save" prefHeight="55.0" prefWidth="107.0" text="Save">
+      <Button layoutX="338.0" layoutY="579.0" mnemonicParsing="false" onAction="#save" prefHeight="55.0" prefWidth="107.0" text="SAVE">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="369.0" layoutY="579.0" mnemonicParsing="false" onAction="#goback" prefHeight="55.0" prefWidth="233.0" text="Go to Dashboard">
+      <Button layoutX="502.0" layoutY="579.0" mnemonicParsing="false" onAction="#goback" prefHeight="55.0" prefWidth="267.0" text="GO TO DASHBOARD">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Button>
       <ImageView fitHeight="224.0" fitWidth="368.0" layoutX="960.0" layoutY="182.0">
@@ -116,5 +116,11 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Button layoutX="150.0" layoutY="579.0" mnemonicParsing="false" onAction="#update" prefHeight="55.0" prefWidth="136.0" text="UPDATE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="523.0" layoutY="191.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="30.0" text="🔍" />
    </children>
 </AnchorPane>

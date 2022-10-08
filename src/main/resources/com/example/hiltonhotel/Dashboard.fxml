@@ -26,17 +26,12 @@
                </image>
             </ImageView>
          </children></AnchorPane>
-      <Label alignment="CENTER" layoutX="989.0" layoutY="756.0" prefHeight="80.0" prefWidth="272.0" style="-fx-background-color: #008B8B;" text="Special Offers" textFill="#f8f7f7">
+      <Label alignment="CENTER" layoutX="989.0" layoutY="739.0" prefHeight="80.0" prefWidth="272.0" style="-fx-background-color: #008B8B;" text="Total Rooms" textFill="#f8f7f7">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="622.0" layoutY="756.0" prefHeight="80.0" prefWidth="272.0" style="-fx-background-color: #008B8B;" text="New Bookings" textFill="WHITE">
-         <font>
-            <Font name="System Bold Italic" size="24.0" />
-         </font>
-      </Label>
-      <Button cacheShape="false" centerShape="false" focusTraversable="false" layoutX="447.0" layoutY="216.0" mnemonicParsing="false" onAction="#guest" prefHeight="57.0" prefWidth="229.0" scaleShape="false" style="-fx-border-color: #008B8B;" text="Guest Info" textFill="#01151b">
+      <Button cacheShape="false" centerShape="false" focusTraversable="false" layoutX="447.0" layoutY="225.0" mnemonicParsing="false" onAction="#guest" prefHeight="57.0" prefWidth="229.0" scaleShape="false" style="-fx-border-color: #008B8B;" text="Guest Info" textFill="#01151b">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -46,7 +41,7 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="974.0" layoutY="318.0" mnemonicParsing="false" onAction="#foodb" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Food &amp; Beverages" textFill="#0f1110">
+      <Button layoutX="447.0" layoutY="504.0" mnemonicParsing="false" onAction="#foodb" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Food &amp; Beverages" textFill="#0f1110">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
@@ -56,32 +51,27 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="974.0" layoutY="216.0" mnemonicParsing="false" onAction="#finance" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Finance" textFill="#0f1110">
+      <Button layoutX="974.0" layoutY="225.0" mnemonicParsing="false" onAction="#finance" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Finance" textFill="#0f1110">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="974.0" layoutY="412.0" mnemonicParsing="false" onAction="#help" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Help" textFill="#0f1100">
+      <Button layoutX="974.0" layoutY="317.0" mnemonicParsing="false" onAction="#help" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Feedback" textFill="#0f1100">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="251.0" layoutY="756.0" prefHeight="80.0" prefWidth="272.0" style="-fx-background-color: #008B8B;" text="          Room Types" textAlignment="CENTER" textFill="#fcf9f9">
+      <Label layoutX="251.0" layoutY="739.0" prefHeight="80.0" prefWidth="272.0" style="-fx-background-color: #008B8B;" text="          Room Types" textAlignment="CENTER" textFill="#fcf9f9">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="495.0" layoutY="802.0" text="03" textFill="#fffbfb">
+      <Label layoutX="364.0" layoutY="816.0" prefHeight="27.0" prefWidth="47.0" style="-fx-background-color: silver;" text="3">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="860.0" layoutY="802.0" prefHeight="27.0" prefWidth="28.0" text=" 09" textFill="#f8efef">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="1234.0" layoutY="802.0" text="03" textFill="#fcf1f1">
+      <Label fx:id="label" layoutX="742.0" layoutY="816.0" prefHeight="27.0" prefWidth="47.0" style="-fx-background-color: silver;">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -110,15 +100,35 @@
             <Image url="@dashboard3.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="192.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="192.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@dashboard6.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="774.0" layoutY="544.0" mnemonicParsing="false" onAction="#loginbk" prefHeight="57.0" prefWidth="116.0" style="-fx-border-color: #008B8B;" text="Logout" textFill="#0f1110">
+      <Button layoutX="708.0" layoutY="613.0" mnemonicParsing="false" onAction="#loginbk" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Logout" textFill="#0f1110">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
+      <Label layoutX="1113.0" layoutY="816.0" prefHeight="27.0" prefWidth="47.0" style="-fx-background-color: silver;" text="100">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="974.0" layoutY="504.0" mnemonicParsing="false" onAction="#delete" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="Delete Records" textFill="#0f1110">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="974.0" layoutY="412.0" mnemonicParsing="false" onAction="#view" prefHeight="57.0" prefWidth="229.0" style="-fx-border-color: #008B8B;" text="View Records" textFill="#0f1110">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="630.0" layoutY="739.0" prefHeight="80.0" prefWidth="272.0" style="-fx-background-color: #008B8B;" text="New Bookings" textFill="#f8f7f7">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

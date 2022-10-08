@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.hiltonhotel.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hiltonhotel.displaycontroller">
+   <children>
+      <AnchorPane layoutY="-10.0" prefHeight="180.0" prefWidth="1300.0" style="-fx-background-color: darkcyan;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@guesti.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1086.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dashboard5.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="579.0" layoutY="65.0" text="Records" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Line endX="100.0" layoutX="650.0" layoutY="123.0" startX="-100.0" stroke="WHITE" />
+         </children></AnchorPane>
+      <TableView fx:id="tableview" editable="true" layoutX="20.0" layoutY="179.0" prefHeight="562.0" prefWidth="1239.0">
+        <columns>
+          <TableColumn fx:id="tf_gid" prefWidth="75.0" text="Guest_id" />
+          <TableColumn fx:id="tf_fname" prefWidth="127.0" text="Guest_name" />
+            <TableColumn fx:id="Age" minWidth="0.0" prefWidth="101.0" text="Age" />
+            <TableColumn fx:id="tf_ty" minWidth="0.0" prefWidth="110.0" text="Room_type" />
+            <TableColumn fx:id="tf_no" minWidth="0.0" prefWidth="110.0" text="Room_no" />
+            <TableColumn fx:id="tf_in" minWidth="0.0" prefWidth="110.0" text="Check_in" />
+            <TableColumn fx:id="tf_out" minWidth="0.0" prefWidth="110.0" text="Check_out" />
+            <TableColumn fx:id="Laundry" minWidth="0.0" prefWidth="110.0" text="Laundry" />
+            <TableColumn fx:id="BR" minWidth="0.0" prefWidth="110.0" text="BR" />
+            <TableColumn fx:id="Service" minWidth="0.0" prefWidth="110.0" text="Service" />
+            <TableColumn fx:id="Total" minWidth="0.0" prefWidth="110.0" text="Total" />
+            <TableColumn fx:id="Due" minWidth="0.0" prefWidth="110.0" text="Due" />
+            <TableColumn fx:id="mode" minWidth="0.0" prefWidth="110.0" text="Payment_mode" />
+        </columns>
+      </TableView>
+      <Button layoutX="945.0" layoutY="749.0" mnemonicParsing="false" onAction="#goback" prefHeight="45.0" prefWidth="329.0" text="GO TO DASHBOARD">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -132,6 +132,7 @@ public  class Foodcontroller extends  NullPointerException implements Initializa
 
                         psinsert.executeUpdate();
                         msg.setText("Saved Successfully..");
+                        tf_gid.clear();
                     }
                 } catch (SQLException ep) {
                     ep.printStackTrace();
@@ -150,6 +151,14 @@ public  class Foodcontroller extends  NullPointerException implements Initializa
         {
             msg.setText("Select Anyone Dining");
         }
+        tf_total.clear();
+        tf_room.clear();
+        tf_charge.clear();
+        tf_gname.clear();
+        tf_chargess.clear();
+        tf_gnamee.clear();
+        tf_gid.clear();
+        tf_gidd.clear();
 
 
 
@@ -183,6 +192,138 @@ public  class Foodcontroller extends  NullPointerException implements Initializa
         clock.setCycleCount(Animation.INDEFINITE);
         clock.play();
 
+    }
+    @FXML
+    private void search(ActionEvent e)
+    {
+
+
+        tf_gnamee.clear();
+        tf_total.clear();
+
+        tf_chargess.clear();
+
+
+        DatabaseConnection connectnow = new DatabaseConnection();
+        Connection connectdb = connectnow.getconnection();
+        try {
+
+
+
+
+            String ps = ("select * from banquet where Guest_id=" + tf_gidd.getText());
+            Statement s = connectdb.createStatement();
+            ResultSet rs = s.executeQuery(ps);
+            while (rs.next()) {
+                tf_gnamee.setText(rs.getString("Guest_name"));
+                tf_total.setText(rs.getString("Total_Guests"));
+                tf_chargess.setText((rs.getString("Charges")));
+
+
+            }
+        }catch(SQLException ee)
+        {
+
+        }
+    }
+    @FXML
+    protected  void update(ActionEvent e)
+    {
+        String Guest_id=tf_gid.getText();
+        String Guest_name=tf_gname.getText();
+        String Room_no=tf_room.getText();
+        String Charge=tf_charge.getText();
+        String Guestt_id=tf_gidd.getText();
+        String Guest_namee=tf_gnamee.getText();
+        String Total=tf_total.getText();
+        String Charges=tf_chargess.getText();
+        if(!tf_gidd.getText().isBlank()) {
+            try {
+                if (!tf_gidd.getText().isBlank()) {
+                    DatabaseConnection connectnow = new DatabaseConnection();
+                    Connection connectdb = connectnow.getconnection();
+                    PreparedStatement pcheck = null;
+                    PreparedStatement pupdate = null;
+                    ResultSet rs = null;
+                    pcheck = connectdb.prepareStatement("select  * from banquet where Guest_id=?");
+                    pcheck.setString(1, Guestt_id);
+                    rs = pcheck.executeQuery();
+
+                    if (rs.isBeforeFirst()) {
+
+                        pupdate = connectdb.prepareStatement("Update banquet set Total_Guests='"+Total+"'where Guest_id=? ");
+                        pupdate.setString(1,Guestt_id);
+                        pupdate.executeUpdate();
+                        pupdate = connectdb.prepareStatement("Update banquet set Guest_name='"+Guest_namee+"'where Guest_id=? ");
+                        pupdate.setString(1,Guestt_id);
+                        pupdate.executeUpdate();
+                        pupdate = connectdb.prepareStatement("Update banquet set Charges='"+Charges+"'where Guest_id=? ");
+                        pupdate.setString(1,Guestt_id);
+                        pupdate.executeUpdate();
+
+                        msg.setText("Updated Successfully..");
+                    } else {
+                        Alert ep = new Alert(Alert.AlertType.ERROR);
+                        ep.setContentText("Guest Does not Exist...");
+                        ep.show();
+                    }
+
+
+                } else {
+                    msg.setText("Enter Guest id in Banquet Dinning");
+                }
+            } catch (SQLException ed) {
+
+            }
+        }
+        else if(!tf_gid.getText().isBlank()) {
+            try {
+                if (!tf_gid.getText().isBlank()) {
+                    DatabaseConnection connectnow = new DatabaseConnection();
+                    Connection connectdb = connectnow.getconnection();
+                    PreparedStatement pcheck = null;
+                    PreparedStatement pupdate = null;
+                    ResultSet rs = null;
+                    pcheck = connectdb.prepareStatement("select  * from restaurant where Guest_id=?");
+                    pcheck.setString(1, Guest_id);
+                    rs = pcheck.executeQuery();
+                    if (rs.isBeforeFirst()) {
+                        pupdate = connectdb.prepareStatement("Update restaurant set Room_no='"+Room_no+"'where Guest_id=? ");
+                        pupdate.setString(1,Guest_id);
+                        pupdate.executeUpdate();
+                        pupdate = connectdb.prepareStatement("Update restaurant set Guest_name='"+Guest_name+"'where Guest_id=? ");
+                        pupdate.setString(1,Guest_id);
+                        pupdate.executeUpdate();
+                        pupdate = connectdb.prepareStatement("Update restaurant set Charges='"+Charge+"'where Guest_id=? ");
+                        pupdate.setString(1,Guest_id);
+                        pupdate.executeUpdate();
+                        msg.setText("Updated Successfully..");
+                    } else {
+                        Alert ep = new Alert(Alert.AlertType.ERROR);
+                        ep.setContentText("Guest Does not Exist...");
+                        ep.show();
+                    }
+
+
+                } else {
+                    msg.setText("Enter Guest id in Restaurant Dinning");
+                }
+            } catch (SQLException ed) {
+
+            }
+        }
+        else
+        {
+            msg.setText("Select Anyone Dining");
+        }
+        tf_total.clear();
+        tf_room.clear();
+        tf_charge.clear();
+        tf_gname.clear();
+        tf_chargess.clear();
+        tf_gnamee.clear();
+        tf_gid.clear();
+        tf_gidd.clear();
     }
 
 }

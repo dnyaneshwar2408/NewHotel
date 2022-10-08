@@ -32,7 +32,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Label layoutX="45.0" layoutY="182.0" prefHeight="58.0" prefWidth="330.0" text="Laundry Maintainance" textFill="#107b83">
+      <Label layoutX="41.0" layoutY="180.0" prefHeight="58.0" prefWidth="330.0" text="Laundry" textFill="#107b83">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
@@ -75,13 +75,13 @@
       <TextField fx:id="tf_gid" layoutX="337.0" layoutY="513.0" prefHeight="35.0" prefWidth="209.0" />
       <TextField fx:id="tf_room" layoutX="337.0" layoutY="578.0" prefHeight="35.0" prefWidth="209.0" />
       <TextField fx:id="tf_clean" layoutX="337.0" layoutY="642.0" prefHeight="35.0" prefWidth="209.0" />
-      <Button layoutX="185.0" layoutY="705.0" mnemonicParsing="false" onAction="#save" prefHeight="35.0" prefWidth="107.0" text="Save">
+      <Button layoutX="424.0" layoutY="705.0" mnemonicParsing="false" onAction="#save" prefHeight="35.0" prefWidth="107.0" text="SAVE">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font></Button>
-      <Button layoutX="433.0" layoutY="705.0" mnemonicParsing="false" onAction="#gobck" prefHeight="58.0" prefWidth="275.0" text="Go to Dashboard">
+      <Button layoutX="588.0" layoutY="705.0" mnemonicParsing="false" onAction="#gobck" prefHeight="60.0" prefWidth="318.0" text="GO TO DASHBOARD">
          <font>
-            <Font name="System Bold" size="28.0" />
+            <Font name="System Bold Italic" size="28.0" />
          </font></Button>
       <Line endX="137.0" layoutX="119.0" layoutY="492.0" startX="-82.0" stroke="#0c544d" />
       <ImageView fitHeight="250.0" fitWidth="256.0" layoutX="786.0" layoutY="368.0">
@@ -99,11 +99,18 @@
             <Image url="@m5.jpg" />
          </image>
       </ImageView>
-      <Line endX="206.0" layoutX="161.0" layoutY="232.0" startX="-125.0" stroke="#0f5d5e" />
+      <Line endX="206.0" layoutX="25.0" layoutY="238.0" startX="-2.0" stroke="#0f5d5e" />
       <Label fx:id="msg" layoutX="278.0" layoutY="773.0" prefHeight="45.0" prefWidth="477.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Button layoutX="207.0" layoutY="705.0" mnemonicParsing="false" onAction="#update" prefHeight="60.0" prefWidth="155.0" text="UPDATE">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="562.0" layoutY="265.0" mnemonicParsing="false" onAction="#search1" text="🔍" />
+      <Button layoutX="562.0" layoutY="518.0" mnemonicParsing="false" onAction="#search2" text="🔍" />
    </children>
 </AnchorPane>

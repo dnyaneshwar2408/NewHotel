@@ -1,7 +1,7 @@
 package com.example.hiltonhotel;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+;
 
 
 public class DatabaseConnection {
@@ -14,7 +14,7 @@ public class DatabaseConnection {
         String url = "jdbc:mysql://localhost/" + databaseName;
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+
             databaselink=DriverManager.getConnection(url,databaseUser,databasePass);
         } catch (Exception e) {
             e.printStackTrace();
